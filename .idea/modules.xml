@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EmptyStateSpinner.iml" filepath="$PROJECT_DIR$/EmptyStateSpinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/app.iml" filepath="$PROJECT_DIR$/library/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testApp/test-app.iml" filepath="$PROJECT_DIR$/testApp/test-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testApp/testApp.iml" filepath="$PROJECT_DIR$/testApp/testApp.iml" />
+    </modules>
+  </component>
+</project>
