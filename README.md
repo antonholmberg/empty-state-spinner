@@ -6,6 +6,24 @@ the built in spinner. The only feature i was missing was an initial empty state 
 So this is my attempt at not re-inventing the spinner but rather extending it with an initial
 (optional) empty state.
 
+## Get it
+
+```groovy
+
+compile 'org.grunkspin:empty-state-spinner:0.1'
+
+```
+
+Currently you also have to add a maven repo since im waiting for jcenter approval.
+
+```groovy
+allprojects {
+    repositories {
+        maven { url 'https://dl.bintray.com/540grunkspin/EmptyStateSpinner' }
+    }
+}
+```
+
 ## Usage
 
 This is an example of how to use the spinner:
