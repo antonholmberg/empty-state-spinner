@@ -1,0 +1,101 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'org.grunkspin'
+version = '0.1'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'EmptyStateSpinner'
+            description 'A spinner with an initial empty state'
+            url 'https://github.com/540Grunkspin/EmptyStateSpinner'
+            inceptionYear '2017'
+
+            packaging 'aar'
+            groupId 'org.grunkspin'
+            artifactId 'empty-state-spinner'
+            version '0.1'
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                connection 'https://github.com/540Grunkspin/EmptyStateSpinner.git'
+                url 'https://github.com/540Grunkspin/EmptyStateSpinner'
+
+            }
+            developers {
+                developer {
+                    name '540Grunkspin'
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+
+    configurations = ['archives']
+
+    pkg {
+        repo = 'EmptyStateSpinner'
+        name = 'empty-state-spinner'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/540Grunkspin/EmptyStateSpinner.git'
+        websiteUrl = 'https://github.com/540Grunkspin/EmptyStateSpinner'
+        issueTrackerUrl = 'https://github.com/540Grunkspin/EmptyStateSpinner/issues'
+
+        version {
+            name = '0.1'
+            desc = 'First release'
+            released  = new Date()
+            vcsTag = '0.1'
+            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
