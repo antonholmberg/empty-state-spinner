@@ -7,7 +7,7 @@ import org.grunkspin.emptystatespinner.EmptyStateSpinner
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var makeItSpin: EmptyStateSpinner
+    private lateinit var spinner: EmptyStateSpinner
 
     private val options = arrayListOf("Option one", "Option two", "Option three")
 
@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        makeItSpin = findViewById(R.id.makeItSpin)
+        spinner = findViewById(R.id.spinner)
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
-        makeItSpin.setAdapter(adapter, "Empty")
+        spinner.setAdapter(adapter, "Empty")
     }
 }
