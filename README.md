@@ -10,7 +10,7 @@ So this is my attempt at not re-inventing the spinner but rather extending it wi
 
 ```groovy
 
-compile 'org.grunkspin:empty-state-spinner:0.1'
+implementation 'org.grunkspin:empty-state-spinner:0.1'
 
 ```
 
