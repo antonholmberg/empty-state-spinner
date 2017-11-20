@@ -32,6 +32,15 @@ class EmptyStateSpinner @JvmOverloads constructor(
 
     private var itemHasBeenClicked = false
 
+    /**
+     * Set the [adapter] for the spinner and also include an [emptyItem].
+     *
+     * The [emptyItem] needs to be handled by the adapters [SpinnerAdapter.getView] method but will
+     * never be called by the [SpinnerAdapter.getDropDownView] method.
+     *
+     * @param adapter The adapter (needs to be using a list that can handle insert and remove).
+     * @param emptyItem An empty item. This will automatically be added as the first item of the adapter.
+     */
     fun <T> setAdapter(adapter: ArrayAdapter<T>, emptyItem: T) {
         this.adapter = EmptyItemAdapter(adapter, emptyItem)
     }
