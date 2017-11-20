@@ -46,14 +46,17 @@ class EmptyStateSpinner @JvmOverloads constructor(
     }
 
     override fun setSelection(position: Int) {
-        (adapter as? EmptyItemAdapter<*>)?.notifyItemHasBeenClicked()
+        getAdapterAsEmptyItemAdapter()?.notifyItemHasBeenClicked()
         super.setSelection(position)
     }
 
+
     override fun setSelection(position: Int, animate: Boolean) {
-        (adapter as? EmptyItemAdapter<*>)?.notifyItemHasBeenClicked()
+        getAdapterAsEmptyItemAdapter()?.notifyItemHasBeenClicked()
         super.setSelection(position, animate)
     }
+
+    private fun getAdapterAsEmptyItemAdapter() = (adapter as? EmptyItemAdapter<*>)
 
     override fun onSaveInstanceState(): Parcelable {
         return SavedState(super.onSaveInstanceState()).apply {
