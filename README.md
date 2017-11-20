@@ -1,7 +1,7 @@
 # Empty State Spinner
 
-So usually when i see people talk about spinners i see people hating on them. I actually quite enjoy
-the built in spinner. The only feature i was missing was an initial empty state for the spinner.
+So usually when I see people talk about spinners I see people hating on them. I actually quite enjoy
+the built in spinner. The only feature I was missing was an initial empty state for the spinner.
 
 So this is my attempt at not re-inventing the spinner but rather extending it with an initial
 (optional) empty state.
