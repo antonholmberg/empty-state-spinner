@@ -14,12 +14,12 @@ implementation 'org.grunkspin:empty-state-spinner:0.1'
 
 ```
 
-Currently you also have to add a maven repo since im waiting for jcenter approval.
+The package is available on jcenter so you have to include that as a repository.
 
 ```groovy
 allprojects {
     repositories {
-        maven { url 'https://dl.bintray.com/540grunkspin/EmptyStateSpinner' }
+        jcenter()
     }
 }
 ```
