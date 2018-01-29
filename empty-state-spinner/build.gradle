@@ -5,15 +5,15 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'org.jetbrains.dokka'
 
 group = 'org.grunkspin'
-version = '0.1'
+version = '0.2'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
-        versionName "0.1"
+        versionName "0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -42,7 +42,7 @@ install {
             packaging 'aar'
             groupId 'org.grunkspin'
             artifactId 'empty-state-spinner'
-            version '0.1'
+            version '0.2'
 
             licenses {
                 license {
@@ -81,10 +81,10 @@ bintray {
         issueTrackerUrl = 'https://github.com/540Grunkspin/EmptyStateSpinner/issues'
 
         version {
-            name = '0.1'
+            name = '0.2'
             desc = 'First release'
             released  = new Date()
-            vcsTag = '0.1'
+            vcsTag = '0.2'
             attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
     }
@@ -121,7 +121,7 @@ artifacts {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

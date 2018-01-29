@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EmptyStateSpinner.iml" filepath="$PROJECT_DIR$/EmptyStateSpinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/app.iml" filepath="$PROJECT_DIR$/library/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/empty-state-spinner.iml" filepath="$PROJECT_DIR$/empty-state-spinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/empty-state-spinner/empty-state-spinner.iml" filepath="$PROJECT_DIR$/empty-state-spinner/empty-state-spinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/empty-state-spinner/empty-state-spinner-empty-state-spinner.iml" filepath="$PROJECT_DIR$/empty-state-spinner/empty-state-spinner-empty-state-spinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/empty-state-spinner/library.iml" filepath="$PROJECT_DIR$/empty-state-spinner/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/testApp/test-app.iml" filepath="$PROJECT_DIR$/testApp/test-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/testApp/testApp.iml" filepath="$PROJECT_DIR$/testApp/testApp.iml" />

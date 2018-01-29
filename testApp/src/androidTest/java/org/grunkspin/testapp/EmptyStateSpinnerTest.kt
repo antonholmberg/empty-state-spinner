@@ -1,14 +1,7 @@
 package org.grunkspin.testapp
 
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.action.ViewActions.pressBack
-import android.support.test.espresso.assertion.ViewAssertions.doesNotExist
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
-import org.hamcrest.Matchers.allOf
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,26 +15,39 @@ class EmptyStateSpinnerTest {
 
     @Test
     fun testEmptyState() {
-        onView(withSpinnerText("Empty")).check(matches(isDisplayed()))
+        mainActivityRobot {
+            verifyEmptyStateSelected()
+        }
     }
 
     @Test
     fun testSelectItem() {
-        onView(withId(R.id.spinner)).perform(click())
-        onView(withText("Option one")).perform(click())
-        onView(allOf(withSpinnerText("Option one"), withId(R.id.spinner))).check(matches(isDisplayed()))
+        mainActivityRobot {
+            openDropDown {
+                selectOptionWithText("Option one")
+            }
+
+            verifyOptionWithTextIsSelected("Option one")
+        }
     }
 
     @Test
     fun testNoEmptyOption() {
-        onView(withId(R.id.spinner)).perform(click())
-        onView(withText("Empty")).check(doesNotExist())
+        mainActivityRobot {
+            openDropDown {
+                verifyDoesNotContainEmptyState()
+            }
+        }
     }
 
     @Test
     fun testKeepEmptyState() {
-        onView(withId(R.id.spinner)).perform(click())
-        onView(withText("Option one")).perform(pressBack())
-        onView(withText("Empty")).check(matches(isDisplayed()))
+        mainActivityRobot {
+            openDropDown {
+                closeDropDown()
+            }
+
+            verifyEmptyStateSelected()
+        }
     }
 }

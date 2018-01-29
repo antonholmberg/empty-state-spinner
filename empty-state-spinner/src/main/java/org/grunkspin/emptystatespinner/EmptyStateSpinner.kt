@@ -26,9 +26,8 @@ import android.widget.*
 class EmptyStateSpinner @JvmOverloads constructor(
         context: Context,
         attributeSet: AttributeSet? = null,
-        defaultStyleAttr: Int = android.R.attr.spinnerStyle,
-        defaultStyleRes: Int = 0
-) : Spinner(context, attributeSet, defaultStyleAttr, defaultStyleRes) {
+        defaultStyleAttr: Int = android.R.attr.spinnerStyle
+) : Spinner(context, attributeSet, defaultStyleAttr) {
 
     private var itemHasBeenClicked = false
 
